@@ -15,8 +15,10 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="gradient-text">Transform</span> Your Products <br />
-              into Interactive <span className="gradient-text">3D Experiences</span>
+              <span className="text-white">Transform Your</span> <br />
+              <span className="text-white">Products into</span> <br />
+              <span className="text-white">Interactive</span> <span className="gradient-text">3D</span> <br />
+              <span className="gradient-text">Experiences</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">
               Create stunning digital twins for your e-commerce products with our cutting-edge 3D visualization platform. Increase engagement, reduce returns, and boost sales.
@@ -32,11 +34,11 @@ const HeroSection = () => {
           </div>
           <div className="flex-1 relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden shadow-xl">
                 {/* This would be your 3D product viewer/demo in production */}
-                <div className="bg-gradient-to-br from-diffstudio-purple to-diffstudio-blue w-full h-full flex items-center justify-center">
+                <div className="bg-gradient-to-br from-diffstudio-purple/80 to-diffstudio-blue/80 w-full h-full flex items-center justify-center">
                   <div className="text-white text-center p-6">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow">
                         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                         <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
@@ -47,7 +49,7 @@ const HeroSection = () => {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold mb-2">Interactive 3D View</h3>
-                    <p className="text-white/80">Our 3D product visualizations let customers explore every angle and detail.</p>
+                    <p className="text-white/90">Our 3D product visualizations let customers explore every angle and detail.</p>
                   </div>
                 </div>
               </div>

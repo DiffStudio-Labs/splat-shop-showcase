@@ -57,8 +57,8 @@ export default {
 					red: '#f05454',
 					orange: '#f1a255',
 					teal: '#78c3af',
-					purple: '#3f2e74',
-					blue: '#438eb5'
+					purple: '#2A366A',
+					blue: '#29599D'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
