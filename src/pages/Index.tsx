@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-diffstudio-purple to-diffstudio-blue text-white">
+    <div className="min-h-screen bg-gradient-to-br from-diffstudio-darkBlue to-diffstudio-blue text-white">
       <Navbar />
       <HeroSection />
       <FeaturesSection />

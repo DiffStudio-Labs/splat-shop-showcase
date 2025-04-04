@@ -36,7 +36,7 @@ const HeroSection = () => {
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden shadow-xl">
                 {/* This would be your 3D product viewer/demo in production */}
-                <div className="bg-gradient-to-br from-diffstudio-purple/80 to-diffstudio-blue/80 w-full h-full flex items-center justify-center">
+                <div className="bg-gradient-to-br from-diffstudio-darkBlue/80 to-diffstudio-blue/80 w-full h-full flex items-center justify-center">
                   <div className="text-white text-center p-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow">

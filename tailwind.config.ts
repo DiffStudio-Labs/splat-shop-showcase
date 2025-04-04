@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,11 +53,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				diffstudio: {
-					red: '#f05454',
+					red: '#e74052',
 					orange: '#f1a255',
-					teal: '#78c3af',
+					teal: '#56c9b0',
 					purple: '#2A366A',
-					blue: '#29599D'
+					blue: '#2567b3',
+					lightBlue: '#56a9d9',
+					darkBlue: '#1e3b6c'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

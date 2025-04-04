@@ -49,12 +49,12 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#f05454] via-[#f1a255] to-[#78c3af];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal;
   font-weight: 700;
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(42, 54, 106, 0.98), rgba(41, 89, 157, 0.95));
+  background: linear-gradient(135deg, rgba(30, 59, 108, 0.98), rgba(37, 103, 179, 0.95));
 }
 
 .glass-card {
@@ -62,9 +62,9 @@
 }
 
 .accent-gradient {
-  background: linear-gradient(90deg, #f05454, #f1a255, #78c3af);
+  background: linear-gradient(90deg, #e74052, #f1a255, #56c9b0);
 }
 
 .waitlist-gradient {
-  background: linear-gradient(135deg, rgba(42, 54, 106, 0.2), rgba(41, 89, 157, 0.2));
+  background: linear-gradient(135deg, rgba(30, 59, 108, 0.2), rgba(37, 103, 179, 0.2));
 }

@@ -27,12 +27,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">Features</a>
-            <a href="#integrations" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">Integrations</a>
-            <a href="#demo" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">Demo</a>
-            <a href="#faq" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">FAQ</a>
-            <a href="#waitlist" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">Join Waitlist</a>
-            <a href="#contact" className="text-sm font-medium hover:text-diffstudio-orange transition-colors">Contact</a>
+            <a href="#features" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Features</a>
+            <a href="#integrations" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Integrations</a>
+            <a href="#demo" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Demo</a>
+            <a href="#faq" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">FAQ</a>
+            <a href="#waitlist" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Join Waitlist</a>
+            <a href="#contact" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Contact</a>
           </nav>
 
           {/* Mobile Menu Button */}
