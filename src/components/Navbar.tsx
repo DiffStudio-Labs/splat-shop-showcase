@@ -12,6 +12,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to close menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
       <div className="container mx-auto px-4 py-3">
@@ -39,7 +44,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden flex items-center justify-center h-8 w-8 rounded-md hover:bg-white/10 transition-colors"
+            className="md:hidden flex items-center justify-center h-8 w-8 rounded-md hover:bg-white/10 transition-colors text-white"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -58,57 +63,47 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div 
-          className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white"
-          style={{
-            backgroundColor: '#3f2e74', 
-            opacity: 1,
-            backdropFilter: 'none',
-            WebkitBackdropFilter: 'none',
-            border: 'none',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-          }}
-        >
+        <div className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white mobile-nav">
           <nav className="flex flex-col p-4">
             <a 
               href="#features" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               Features
             </a>
             <a 
               href="#integrations" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               Integrations
             </a>
             <a 
               href="#demo" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               Demo
             </a>
             <a 
               href="#faq" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               FAQ
             </a>
             <a 
               href="#waitlist" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               Join Waitlist
             </a>
             <a 
               href="#contact" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleLinkClick}
             >
               Contact
             </a>
@@ -119,7 +114,7 @@ const Navbar = () => {
               className="w-full bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal hover:opacity-90 text-white py-3"
               onClick={() => {
                 window.location.href = "#waitlist";
-                setIsMenuOpen(false);
+                handleLinkClick();
               }}
             >
               Join Waitlist
