@@ -58,82 +58,53 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-0 z-50 bg-gradient-to-b from-black to-gray-900 flex flex-col">
-          <div className="flex justify-between items-center p-4 border-b border-white/10">
-            <Link 
-              to="/" 
-              className="flex items-center"
+        <div className="md:hidden fixed inset-0 top-14 z-50 bg-black flex flex-col text-white">
+          <nav className="flex flex-col p-4">
+            <a 
+              href="#features" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
-              <img 
-                src="/lovable-uploads/5e1d0c7d-49ba-4cbb-9b5a-3864ed85e994.png" 
-                alt="DiffStudio Logo" 
-                className="h-8 w-auto"
-              />
-              <span className="ml-2 text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal">
-                DiffStudio
-              </span>
-            </Link>
-            
-            <button 
-              className="p-2 rounded-md hover:bg-white/10"
+              Features
+            </a>
+            <a 
+              href="#integrations" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
-              aria-label="Close menu"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>
-              </svg>
-            </button>
-          </div>
+              Integrations
+            </a>
+            <a 
+              href="#demo" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Demo
+            </a>
+            <a 
+              href="#faq" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
+            </a>
+            <a 
+              href="#waitlist" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Join Waitlist
+            </a>
+            <a 
+              href="#contact" 
+              className="py-3 px-4 text-lg hover:bg-white/5"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </a>
+          </nav>
           
-          <div className="flex-1 overflow-y-auto">
-            <nav className="flex flex-col p-4">
-              <a 
-                href="#features" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Features
-              </a>
-              <a 
-                href="#integrations" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Integrations
-              </a>
-              <a 
-                href="#demo" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Demo
-              </a>
-              <a 
-                href="#faq" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
-              </a>
-              <a 
-                href="#waitlist" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Join Waitlist
-              </a>
-              <a 
-                href="#contact" 
-                className="py-3 px-4 text-lg border-b border-white/10 hover:bg-white/5"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </nav>
-          </div>
-          
-          <div className="p-4 border-t border-white/10">
+          <div className="p-4 mt-auto">
             <Button 
               className="w-full bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal hover:opacity-90 text-white py-3"
               onClick={() => {
