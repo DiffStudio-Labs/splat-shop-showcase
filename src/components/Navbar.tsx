@@ -29,12 +29,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-sm hover:text-diffstudio-orange transition-colors">Features</a>
-            <a href="#integrations" className="text-sm hover:text-diffstudio-orange transition-colors">Integrations</a>
-            <a href="#demo" className="text-sm hover:text-diffstudio-orange transition-colors">Demo</a>
-            <a href="#faq" className="text-sm hover:text-diffstudio-orange transition-colors">FAQ</a>
-            <a href="#waitlist" className="text-sm hover:text-diffstudio-orange transition-colors">Join Waitlist</a>
-            <a href="#contact" className="text-sm hover:text-diffstudio-orange transition-colors">Contact</a>
+            <a href="#features" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Features</a>
+            <a href="#integrations" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Integrations</a>
+            <a href="#demo" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Demo</a>
+            <a href="#faq" className="text-sm text-white hover:text-diffstudio-orange transition-colors">FAQ</a>
+            <a href="#waitlist" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Join Waitlist</a>
+            <a href="#contact" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Contact</a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -58,46 +58,46 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-14 z-50 bg-black flex flex-col text-white">
+        <div className="md:hidden fixed inset-0 top-14 z-50 bg-diffstudio-purple flex flex-col text-white">
           <nav className="flex flex-col p-4">
             <a 
               href="#features" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </a>
             <a 
               href="#integrations" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               Integrations
             </a>
             <a 
               href="#demo" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               Demo
             </a>
             <a 
               href="#faq" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
             </a>
             <a 
               href="#waitlist" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               Join Waitlist
             </a>
             <a 
               href="#contact" 
-              className="py-3 px-4 text-lg hover:bg-white/5"
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
