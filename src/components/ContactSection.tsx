@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 const ContactSection = () => {
   const [formState, setFormState] = useState({
     name: "",
@@ -16,18 +17,21 @@ const ContactSection = () => {
   const {
     toast
   } = useToast();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value
     });
   };
+
   const handleSelectChange = (value: string) => {
     setFormState({
       ...formState,
       subject: value
     });
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -49,8 +53,8 @@ const ContactSection = () => {
       });
     }, 1000);
   };
+
   return <section id="contact" className="py-20 relative hero-gradient">
-      {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
         <div className="absolute top-[30%] right-[15%] w-80 h-80 rounded-full bg-diffstudio-red blur-[100px]"></div>
         <div className="absolute bottom-[20%] left-[5%] w-64 h-64 rounded-full bg-diffstudio-purple blur-[80px]"></div>
@@ -122,7 +126,7 @@ const ContactSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
-            <p className="text-gray-300">hello@diffstudio.co</p>
+            <p className="text-gray-300">contact@diffstudio.co</p>
           </div>
           <div className="p-6">
             <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-4">
@@ -167,4 +171,5 @@ const ContactSection = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;
