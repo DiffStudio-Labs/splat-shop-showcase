@@ -26,7 +26,7 @@ const features = [
   {
     icon: <BarChart3 />,
     title: "Analytics Dashboard",
-    description: "Track engagement metrics and understand how customers interact with your 3D product visualizations."
+    description: "Get comprehensive insights with our Klaviyo-compatible analytics to understand customer behavior and optimize your 3D product presentations."
   },
   {
     icon: <Smartphone />,
