@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
@@ -12,10 +13,12 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="gradient-text">Transform</span> Your Products <br />
-              into Interactive <span className="gradient-text">3D Experiences</span>
+              Bring Products to Life with <span className="gradient-text">Interactive 3D</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">Create stunning digital twins for your e-commerce products with stunning 3D visualization platform. Increase engagement, reduce returns, and boost sales.</p>
+            <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">
+              Create stunning digital twins for your e-commerce products with our 3D visualization platform. 
+              <span className="block mt-2 text-white font-medium">Launching Soon — Join the Waitlist for Early Access!</span>
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
                 <a href="#waitlist">Join the Waitlist</a>
