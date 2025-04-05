@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     question: "What is DiffStudio and how does it work?",
-    answer: "DiffStudio is a platform that enables e-commerce sellers to create interactive 3D digital twins of their products. Using advanced Gaussian splatting technology, we transform standard product images into photorealistic 3D models that customers can interact with, explore from any angle, and zoom in to see fine details."
+    answer: "DiffStudio is a platform that enables e-commerce sellers to create interactive 3D digital twins of their products. Using advanced scanning, we transform standard product images into photorealistic 3D models that customers can interact with, explore from any angle, and zoom in to see fine details."
   },
   {
     question: "What e-commerce platforms do you integrate with?",
