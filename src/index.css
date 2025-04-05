@@ -74,4 +74,12 @@
   opacity: 1 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  /* Ensure no transparency by disabling all potential transparency properties */
+  -moz-opacity: 1 !important;
+  -khtml-opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  isolation: isolate !important;
+  mix-blend-mode: normal !important;
 }
