@@ -65,7 +65,7 @@ const HowItWorksSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
             <div className="flex items-start">
               <Check className="mr-2 text-diffstudio-teal mt-1 flex-shrink-0" size={20} />
-              <span><strong>Boost Conversion Potential:</strong> Provide crystal-clear product understanding that encourages purchases.</span>
+              <span><strong>Boost Conversion Potential:</strong> Interactive 3D products can increase conversion rates by up to 90%.</span>
             </div>
             <div className="flex items-start">
               <Check className="mr-2 text-diffstudio-teal mt-1 flex-shrink-0" size={20} />
