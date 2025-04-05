@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+import { addToWaitlist } from "@/lib/supabase";
 
 const PersistentWaitlist = () => {
   const [email, setEmail] = useState("");
@@ -10,24 +11,53 @@ const PersistentWaitlist = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      // Email validation
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!emailRegex.test(email)) {
+        toast({
+          title: "Invalid Email",
+          description: "Please enter a valid email address",
+          variant: "destructive",
+          duration: 3000
+        });
+        setIsLoading(false);
+        return;
+      }
+      
+      // Add to waitlist with source identifier
+      const source = window.innerWidth <= 768 ? 'persistent_mobile' : 'persistent_desktop';
+      const result = await addToWaitlist(email, source);
+      
+      if (result.success) {
+        toast({
+          title: "Success!",
+          description: "You've been added to our waitlist. We'll notify you when we launch!",
+          duration: 5000,
+        });
+        setEmail("");
+        // On mobile, collapse the form after successful submission
+        if (window.innerWidth <= 768) {
+          setIsExpanded(false);
+        }
+      } else {
+        throw new Error('Failed to add to waitlist');
+      }
+    } catch (error) {
+      console.error('Waitlist submission error:', error);
       toast({
-        title: "Success!",
-        description: "You've been added to our waitlist. We'll notify you when we launch!",
+        title: "Something went wrong",
+        description: "Unable to add you to the waitlist. Please try again later.",
+        variant: "destructive",
         duration: 5000,
       });
-      setEmail("");
-      // On mobile, collapse the form after successful submission
-      if (window.innerWidth <= 768) {
-        setIsExpanded(false);
-      }
-    }, 1000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // For mobile: toggle the expanded state

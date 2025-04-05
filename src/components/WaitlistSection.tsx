@@ -3,26 +3,55 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+import { addToWaitlist } from "@/lib/supabase";
 
 const WaitlistSection = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Email validation
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+        duration: 3000
+      });
+      return;
+    }
+    
     setIsLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      // Call the Supabase function to add to waitlist
+      const result = await addToWaitlist(email, 'main_section');
+      
+      if (result.success) {
+        toast({
+          title: "Success!",
+          description: "You've been added to our waitlist. We'll notify you when we launch!",
+          duration: 5000,
+        });
+        setEmail("");
+      } else {
+        throw new Error('Failed to add to waitlist');
+      }
+    } catch (error) {
+      console.error('Waitlist submission error:', error);
       toast({
-        title: "Success!",
-        description: "You've been added to our waitlist. We'll notify you when we launch!",
+        title: "Something went wrong",
+        description: "Unable to add you to the waitlist. Please try again later.",
+        variant: "destructive",
         duration: 5000,
       });
-      setEmail("");
-    }, 1000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
