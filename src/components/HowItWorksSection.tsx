@@ -1,10 +1,7 @@
-
 import { ArrowRight, Camera, Workflow, Puzzle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const HowItWorksSection = () => {
-  return (
-    <section id="how-it-works" className="py-20 bg-white relative">
+  return <section id="how-it-works" className="py-20 bg-white relative">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-10 z-0">
         <div className="absolute top-[20%] right-[10%] w-72 h-72 rounded-full bg-diffstudio-blue blur-[80px]"></div>
@@ -40,9 +37,7 @@ const HowItWorksSection = () => {
               <Workflow size={28} />
             </div>
             <h3 className="text-xl font-bold mb-3">2. Process</h3>
-            <p className="text-gray-600 mb-4">
-              Our advanced technology transforms your photos into interactive 3D models that accurately represent your products based on the image quality provided.
-            </p>
+            <p className="text-gray-600 mb-4">Our advanced technology transforms your photos into interactive 3D models that accurately represent your products based on the images.</p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
             </div>
@@ -117,8 +112,6 @@ const HowItWorksSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorksSection;
