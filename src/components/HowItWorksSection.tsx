@@ -1,3 +1,4 @@
+
 import { ArrowRight, Camera, Workflow, Puzzle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const HowItWorksSection = () => {
@@ -24,7 +25,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">1. Capture</h3>
             <p className="text-gray-600 mb-4">
-              Take photos of your products from multiple angles using any camera. Our platform handles the processing automatically with no specialized equipment needed.
+              Take photos or videos of your products using our mobile app or upload them from your camera to our web application. No specialized equipment needed - just your smartphone or regular camera.
             </p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
@@ -37,7 +38,7 @@ const HowItWorksSection = () => {
               <Workflow size={28} />
             </div>
             <h3 className="text-xl font-bold mb-3">2. Process</h3>
-            <p className="text-gray-600 mb-4">Our advanced technology transforms your photos into interactive 3D models that accurately represent your products based on the images.</p>
+            <p className="text-gray-600 mb-4">Our advanced technology transforms your photos or videos into interactive 3D models that accurately represent your products. The quality of your 3D models will reflect the quality of your uploaded media.</p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
             </div>
