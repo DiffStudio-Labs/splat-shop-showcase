@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">1. Capture</h3>
             <p className="text-gray-600 mb-4">
-              Simply send us your products or upload photos from multiple angles. Our technology handles the rest, no specialized equipment needed.
+              Take photos of your products from multiple angles using any camera. Our platform handles the processing automatically with no specialized equipment needed.
             </p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">2. Process</h3>
             <p className="text-gray-600 mb-4">
-              Our advanced technology transforms your product into a high-quality interactive 3D model, preserving every detail with photorealistic accuracy.
+              Our advanced technology transforms your photos into interactive 3D models that accurately represent your products based on the image quality provided.
             </p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
