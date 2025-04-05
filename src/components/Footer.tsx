@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const basePath = import.meta.env.BASE_URL;
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -9,7 +11,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/diffstudio-logo.svg" 
+                src={`${basePath}lovable-uploads/diffstudio-logo.svg`} 
                 alt="DiffStudio Logo" 
                 className="h-12 w-auto"
               />
