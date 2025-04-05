@@ -3,7 +3,8 @@ import { ArrowRight, Camera, Workflow, Puzzle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
-  return <section id="how-it-works" className="py-20 bg-white relative">
+  return (
+    <section id="how-it-works" className="py-20 bg-white relative">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-10 z-0">
         <div className="absolute top-[20%] right-[10%] w-72 h-72 rounded-full bg-diffstudio-blue blur-[80px]"></div>
@@ -26,7 +27,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">1. Capture Your Product</h3>
             <p className="text-gray-600 mb-4">
-              Take photos or videos of your products using our mobile app or upload them from your camera to our web application. No specialized equipment needed - just your smartphone or regular camera.
+              Use your smartphone or digital camera to take photos or video following our simple guidelines. No specialized hardware needed – just clear shots from multiple angles.
             </p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
@@ -39,7 +40,9 @@ const HowItWorksSection = () => {
               <Workflow size={28} />
             </div>
             <h3 className="text-xl font-bold mb-3">2. Upload & Process</h3>
-            <p className="text-gray-600 mb-4">Our advanced technology transforms your photos or videos into interactive 3D models that accurately represent your products. The quality of your 3D models will reflect the quality of your uploaded media.</p>
+            <p className="text-gray-600 mb-4">
+              Upload your media to the DiffStudio platform. Our AI-powered engine analyzes the images/video and automatically generates a high-fidelity, web-optimized 3D model.
+            </p>
             <div className="mt-auto pt-4">
               <ArrowRight className="text-diffstudio-teal mx-auto hidden md:block" />
             </div>
@@ -94,6 +97,8 @@ const HowItWorksSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HowItWorksSection;
