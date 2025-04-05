@@ -1,9 +1,6 @@
-
 import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
+  return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
         <div className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-diffstudio-red blur-[80px]"></div>
@@ -18,9 +15,7 @@ const HeroSection = () => {
               <span className="gradient-text">Transform</span> Your Products <br />
               into Interactive <span className="gradient-text">3D Experiences</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">
-              Create stunning digital twins for your e-commerce products with our cutting-edge 3D visualization platform. Increase engagement, reduce returns, and boost sales.
-            </p>
+            <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">Create stunning digital twins for your e-commerce products with stunning 3D visualization platform. Increase engagement, reduce returns, and boost sales.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
                 <a href="#waitlist">Join the Waitlist</a>
@@ -57,8 +52,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
