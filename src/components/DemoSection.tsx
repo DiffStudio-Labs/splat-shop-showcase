@@ -41,12 +41,12 @@ const DemoSection = () => {
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="product1" value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-3 mb-8 bg-black/30 p-1">
+            <TabsList className="grid grid-cols-3 mb-8 bg-black/20 rounded-md p-1">
               {demoProducts.map(product => (
                 <TabsTrigger 
                   key={product.id} 
                   value={product.id} 
-                  className="text-gray-300 data-[state=active]:bg-diffstudio-blue data-[state=active]:text-white"
+                  className="text-gray-300 data-[state=active]:bg-diffstudio-teal data-[state=active]:text-white"
                 >
                   {product.name}
                 </TabsTrigger>
