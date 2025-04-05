@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const basePath = import.meta.env.BASE_URL;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/diffstudio-logo.svg" 
+              src={`${basePath}lovable-uploads/diffstudio-logo.svg`} 
               alt="DiffStudio Logo" 
               className="h-10 w-auto"
             />
