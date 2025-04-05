@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "How long does it take to create a 3D model of my product?",
-    answer: "The creation time depends on the complexity of your product, but typically takes 1-3 business days. Once created, your 3D models are immediately available to edit in our platform and publish to your store."
+    answer: "The creation time depends on the complexity of your product. Our advanced GPU-powered processing systems work to create your 3D models efficiently, and once processed, you can access them through our platform to edit and publish to your store."
   },
   {
     question: "What kind of products work best with your platform?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "When is DiffStudio launching?",
-    answer: "We're currently in the final stages of development and plan to launch in early 2025. Join our waitlist to be among the first to access the platform when we launch and receive exclusive early adopter benefits."
+    answer: "We're currently in development and plan to launch in Q3/Q4 of 2025. However, we'll be rolling out beta access earlier for select partners. Join our waitlist to be considered for early beta access and receive exclusive founding member benefits when we launch."
   },
   {
     question: "How much does DiffStudio cost?",
