@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -15,9 +16,7 @@ const ContactSection = () => {
     message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
@@ -35,24 +34,84 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic form validation
+    if (!formState.name || !formState.email || !formState.message) {
+      toast({
+        title: "Error",
+        description: "Please fill out all required fields",
+        variant: "destructive",
+        duration: 3000
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(formState.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+        duration: 3000
+      });
+      return;
+    }
+
+    // Message length validation
+    if (formState.message.length < 10) {
+      toast({
+        title: "Error",
+        description: "Message must be at least 10 characters long",
+        variant: "destructive",
+        duration: 3000
+      });
+      return;
+    }
+
     setIsLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-        duration: 5000
+    // Initialize EmailJS
+    emailjs.init("yXW6dOUMMhBYkTH05");
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formState.name,
+      email: formState.email,
+      company: formState.company,
+      subject: formState.subject,
+      message: formState.message,
+      to_name: "DiffStudio"
+    };
+
+    // Send email
+    emailjs.send("service_5jj1zzu", "template_2g033mt", templateParams)
+      .then(() => {
+        setIsLoading(false);
+        toast({
+          title: "Message sent!",
+          description: `Thank you ${formState.name} for contacting us! We'll get back to you soon.`,
+          duration: 5000
+        });
+        // Reset form
+        setFormState({
+          name: "",
+          email: "",
+          company: "",
+          subject: "pre-launch",
+          message: ""
+        });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        setIsLoading(false);
+        toast({
+          title: "Failed to send message",
+          description: "Please try again later.",
+          variant: "destructive",
+          duration: 5000
+        });
       });
-      setFormState({
-        name: "",
-        email: "",
-        company: "",
-        subject: "pre-launch",
-        message: ""
-      });
-    }, 1000);
   };
 
   return <section id="contact" className="py-20 relative hero-gradient">
