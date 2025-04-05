@@ -1,27 +1,27 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Check, Layers, Palette, BarChart3, Smartphone, Lightbulb } from "lucide-react";
+import { Globe, Link, Image, BarChart3, Smartphone, Layers } from "lucide-react";
 
 const features = [
   {
-    icon: <Lightbulb />,
-    title: "Advanced 3D Rendering",
-    description: "State-of-the-art technology that creates high-quality digital twins of your products with photorealistic details."
+    icon: <Image />,
+    title: "Photorealistic 3D Displays",
+    description: "Create stunning, high-fidelity product visualizations that look indistinguishable from professional photography."
   },
   {
-    icon: <Check />,
-    title: "One-Click Integration",
-    description: "Seamlessly integrate with your existing e-commerce platform with our simple plugins and APIs."
+    icon: <Link />,
+    title: "Seamless Platform Integration",
+    description: "Effortlessly connect with your existing e-commerce platform through our simple plugins and robust APIs."
   },
   {
     icon: <Layers />,
-    title: "Interactive Product Experiences",
-    description: "Let customers interact with products in real-time, zooming, rotating, and exploring every detail."
+    title: "Interactive Shopping Experience",
+    description: "Enable customers to interact with products in real-time, exploring every detail from any angle."
   },
   {
-    icon: <Palette />,
-    title: "Customizable Display Options",
-    description: "Tailor the viewer to match your brand's aesthetic with flexible customization options."
+    icon: <Globe />,
+    title: "Cross-Platform Consistency",
+    description: "Deliver the same exceptional product experience across web, mobile apps, and in-store displays."
   },
   {
     icon: <BarChart3 />,
@@ -30,8 +30,8 @@ const features = [
   },
   {
     icon: <Smartphone />,
-    title: "Multi-Platform Support",
-    description: "Your 3D products work flawlessly across all devices - desktop, mobile, and tablets."
+    title: "Native Apps & Mobile Support",
+    description: "Reach customers everywhere with dedicated mobile applications and responsive web experiences that work across all devices."
   }
 ];
 
@@ -40,9 +40,9 @@ const FeaturesSection = () => {
     <section id="features" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose DiffStudio?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">The Complete Product Visualization Platform</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our platform offers cutting-edge features designed to revolutionize how your customers experience products online.
+            Transform how customers experience your products with our comprehensive visualization platform for web, mobile, and e-commerce.
           </p>
         </div>
 
