@@ -10,6 +10,12 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 // Function to add an email to the waitlist
 export async function addToWaitlist(email: string, source: string = 'main') {
   try {
+    // Basic email validation before sending to Supabase
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(email)) {
+      return { success: false, error: 'Invalid email format' };
+    }
+    
     const { data, error } = await supabase
       .from('waitlist')
       .insert([
