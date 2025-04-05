@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
@@ -12,7 +11,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Bring Products to Life with <span className="gradient-text">Interactive 3D</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-xl mx-auto lg:mx-0">
