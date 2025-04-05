@@ -57,7 +57,7 @@ const IntegrationsSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            These integrations will be released progressively during our beta phase. We're also working on additional analytics and marketing integrations including Google Analytics, and more. Join the waitlist for early access.
+            These integrations will be released progressively during our beta phase. We're also working on additional analytics integrations (Klaviyo, Google Analytics) and marketing tools to enhance your 3D product experience. Join the waitlist for early access.
           </p>
           <Button 
             variant="outline" 

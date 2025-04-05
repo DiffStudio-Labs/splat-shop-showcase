@@ -26,7 +26,7 @@ const features = [
   {
     icon: <BarChart3 />,
     title: "Analytics Dashboard",
-    description: "Get comprehensive insights with Klaviyo integration to understand customer behavior and optimize your 3D product presentations."
+    description: "Comprehensive insights dashboard with support for popular analytics platforms like Klaviyo, allowing you to understand customer behavior and optimize your 3D product presentations."
   },
   {
     icon: <Smartphone />,
