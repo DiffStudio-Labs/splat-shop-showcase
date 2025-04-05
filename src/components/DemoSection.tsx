@@ -100,9 +100,11 @@ const DemoSection = () => {
                         </li>
                       </ul>
                     </div>
-                    <Button className="bg-white hover:bg-white/90 text-diffstudio-purple">
-                      Learn More
-                    </Button>
+                    <a href="#waitlist">
+                      <Button className="bg-white hover:bg-white/90 text-diffstudio-purple">
+                        Join Waitlist
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </TabsContent>)}
