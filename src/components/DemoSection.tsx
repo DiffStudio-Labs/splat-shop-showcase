@@ -1,21 +1,29 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-const demoProducts = [{
-  id: "product1",
-  name: "Designer Chair",
-  description: "Explore our ergonomic designer chair from every angle with our interactive 3D model."
-}, {
-  id: "product2",
-  name: "Smart Watch",
-  description: "Examine the details of our latest smartwatch with interactive controls and animations."
-}, {
-  id: "product3",
-  name: "Running Shoes",
-  description: "See these performance running shoes from all angles and explore their features."
-}];
+
+const demoProducts = [
+  {
+    id: "product1",
+    name: "Designer Chair",
+    description: "Explore our ergonomic designer chair from every angle with our interactive 3D model."
+  }, 
+  {
+    id: "product2",
+    name: "Smart Watch",
+    description: "Examine the details of our latest smartwatch with interactive controls and animations."
+  }, 
+  {
+    id: "product3",
+    name: "Running Shoes",
+    description: "See these performance running shoes from all angles and explore their features."
+  }
+];
+
 const DemoSection = () => {
   const [activeTab, setActiveTab] = useState("product1");
+  
   return <section id="demo" className="py-20 relative hero-gradient">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
@@ -33,10 +41,16 @@ const DemoSection = () => {
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="product1" value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-3 mb-8">
-              {demoProducts.map(product => <TabsTrigger key={product.id} value={product.id} className="data-[state=active]:bg-white/10 data-[state=active]:text-white">
+            <TabsList className="grid grid-cols-3 mb-8 bg-black/30 p-1">
+              {demoProducts.map(product => (
+                <TabsTrigger 
+                  key={product.id} 
+                  value={product.id} 
+                  className="text-gray-300 data-[state=active]:bg-diffstudio-blue data-[state=active]:text-white"
+                >
                   {product.name}
-                </TabsTrigger>)}
+                </TabsTrigger>
+              ))}
             </TabsList>
             
             {demoProducts.map(product => <TabsContent key={product.id} value={product.id}>
@@ -97,4 +111,5 @@ const DemoSection = () => {
       </div>
     </section>;
 };
+
 export default DemoSection;
