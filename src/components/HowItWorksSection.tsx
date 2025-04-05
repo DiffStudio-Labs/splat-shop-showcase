@@ -1,5 +1,5 @@
 
-import { ArrowRight, Camera, Workflow, PuzzlePiece } from "lucide-react";
+import { ArrowRight, Camera, Workflow, Puzzle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
           {/* Step 3: Integrate */}
           <div className="flex flex-col items-center text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
             <div className="w-16 h-16 rounded-full bg-gradient-to-r from-diffstudio-teal to-diffstudio-blue flex items-center justify-center text-white mb-4">
-              <PuzzlePiece size={28} />
+              <Puzzle size={28} />
             </div>
             <h3 className="text-xl font-bold mb-3">3. Integrate</h3>
             <p className="text-gray-600 mb-4">
