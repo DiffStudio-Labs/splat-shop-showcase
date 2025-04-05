@@ -22,9 +22,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/5e1d0c7d-49ba-4cbb-9b5a-3864ed85e994.png" 
+              src="/lovable-uploads/diffstudio-logo.svg" 
               alt="DiffStudio Logo" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
             <span className="ml-2 text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal">
               DiffStudio
