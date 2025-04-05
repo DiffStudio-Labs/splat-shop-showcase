@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const integrations = [
   {
@@ -39,14 +40,14 @@ const IntegrationsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {integrations.map((integration, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="h-16 w-full flex items-center justify-center mb-4 bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition-all">
+              <div className="w-full aspect-square flex items-center justify-center mb-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-2">
                 <img 
                   src={integration.logo} 
                   alt={`${integration.name} logo`} 
-                  className="max-h-full max-w-full object-contain" 
+                  className="w-4/5 h-4/5 object-contain" 
                 />
               </div>
               <p className="text-sm font-medium text-gray-700">{integration.name}</p>
@@ -55,7 +56,19 @@ const IntegrationsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 text-sm">These integrations will be released progressively during our beta phase. Join the waitlist for early access.</p>
+          <p className="text-gray-600 mb-4">These integrations will be released progressively during our beta phase. Join the waitlist for early access.</p>
+          <Button 
+            variant="outline" 
+            className="bg-white hover:bg-gray-100" 
+            onClick={() => {
+              const waitlistSection = document.getElementById('waitlist');
+              if (waitlistSection) {
+                waitlistSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Join Waitlist
+          </Button>
         </div>
       </div>
     </section>
