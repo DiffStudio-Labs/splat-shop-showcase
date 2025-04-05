@@ -26,10 +26,6 @@ const integrations = [
   {
     name: "BigCommerce",
     logo: "https://img.logo.dev/bigcommerce.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
-  },
-  {
-    name: "Klaviyo",
-    logo: "https://img.logo.dev/klaviyo.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   }
 ];
 
@@ -44,7 +40,7 @@ const IntegrationsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {integrations.map((integration, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="w-full aspect-square flex items-center justify-center mb-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-2">
@@ -61,7 +57,7 @@ const IntegrationsSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            These integrations will be released progressively during our beta phase. We're also working on additional analytics and marketing integrations including Klaviyo, Google Analytics, and more. Join the waitlist for early access.
+            These integrations will be released progressively during our beta phase. We're also working on additional analytics and marketing integrations including Google Analytics, and more. Join the waitlist for early access.
           </p>
           <Button 
             variant="outline" 
