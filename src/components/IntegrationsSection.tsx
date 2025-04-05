@@ -55,7 +55,7 @@ const IntegrationsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 text-sm">These integrations are planned for future releases.</p>
+          <p className="text-gray-600 text-sm">These integrations will be released progressively during our beta phase. Join the waitlist for early access.</p>
         </div>
       </div>
     </section>
