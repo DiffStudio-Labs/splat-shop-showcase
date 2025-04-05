@@ -67,32 +67,3 @@
 .waitlist-gradient {
   background: linear-gradient(135deg, rgba(63, 46, 116, 0.2), rgba(67, 142, 181, 0.2));
 }
-
-/* Mobile navigation styles */
-.mobile-nav-container {
-  background-color: #3f2e74;
-  position: fixed;
-  top: 56px; /* Match the header height */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-/* Ensure the mobile nav is completely opaque and has no backdrop filters */
-.mobile-nav-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3f2e74;
-  opacity: 1;
-  z-index: -1;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
