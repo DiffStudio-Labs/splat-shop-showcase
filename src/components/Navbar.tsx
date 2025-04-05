@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -63,7 +62,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-14 z-50 bg-diffstudio-purple">
+        <div className="md:hidden fixed left-0 right-0 top-[60px] min-h-screen z-[100] bg-black/80 backdrop-blur-lg">
           <nav className="flex flex-col p-4 text-white">
             <a 
               href="#features" 
