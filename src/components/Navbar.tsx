@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/32039f7f-9674-49b4-8ef3-7f5a43ccd2b3.png" 
+              src="/lovable-uploads/5e1d0c7d-49ba-4cbb-9b5a-3864ed85e994.png" 
               alt="DiffStudio Logo" 
               className="h-10 w-auto"
             />
@@ -27,12 +27,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Features</a>
-            <a href="#integrations" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Integrations</a>
-            <a href="#demo" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Demo</a>
-            <a href="#faq" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">FAQ</a>
-            <a href="#waitlist" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Join Waitlist</a>
-            <a href="#contact" className="text-sm font-medium hover:text-diffstudio-teal transition-colors">Contact</a>
+            <a href="#features" className="text-sm hover:text-diffstudio-orange transition-colors">Features</a>
+            <a href="#integrations" className="text-sm hover:text-diffstudio-orange transition-colors">Integrations</a>
+            <a href="#demo" className="text-sm hover:text-diffstudio-orange transition-colors">Demo</a>
+            <a href="#faq" className="text-sm hover:text-diffstudio-orange transition-colors">FAQ</a>
+            <a href="#waitlist" className="text-sm hover:text-diffstudio-orange transition-colors">Join Waitlist</a>
+            <a href="#contact" className="text-sm hover:text-diffstudio-orange transition-colors">Contact</a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -61,42 +61,42 @@ const Navbar = () => {
             <nav className="flex flex-col space-y-4">
               <a 
                 href="#features" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a 
                 href="#integrations" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Integrations
               </a>
               <a 
                 href="#demo" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Demo
               </a>
               <a 
                 href="#faq" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
               </a>
               <a 
                 href="#waitlist" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Join Waitlist
               </a>
               <a 
                 href="#contact" 
-                className="px-4 py-2 font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
