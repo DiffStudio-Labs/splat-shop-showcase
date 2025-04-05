@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -33,11 +34,11 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
+            <a href="#how-it-works" className="text-sm text-white hover:text-diffstudio-orange transition-colors">How it Works</a>
+            <a href="#showcase" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Showcase</a>
             <a href="#features" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Features</a>
             <a href="#integrations" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Integrations</a>
-            <a href="#demo" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Demo</a>
             <a href="#faq" className="text-sm text-white hover:text-diffstudio-orange transition-colors">FAQ</a>
-            <a href="#waitlist" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Join Waitlist</a>
             <a href="#contact" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Contact</a>
           </nav>
 
@@ -65,6 +66,20 @@ const Navbar = () => {
         <div className="md:hidden fixed left-0 right-0 top-[60px] min-h-screen z-[100] bg-black/80 backdrop-blur-lg">
           <nav className="flex flex-col p-4 text-white">
             <a 
+              href="#how-it-works" 
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
+              onClick={handleLinkClick}
+            >
+              How it Works
+            </a>
+            <a 
+              href="#showcase" 
+              className="py-3 px-4 text-lg text-white hover:bg-white/10"
+              onClick={handleLinkClick}
+            >
+              Showcase
+            </a>
+            <a 
               href="#features" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={handleLinkClick}
@@ -79,25 +94,11 @@ const Navbar = () => {
               Integrations
             </a>
             <a 
-              href="#demo" 
-              className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={handleLinkClick}
-            >
-              Demo
-            </a>
-            <a 
               href="#faq" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
               onClick={handleLinkClick}
             >
               FAQ
-            </a>
-            <a 
-              href="#waitlist" 
-              className="py-3 px-4 text-lg text-white hover:bg-white/10"
-              onClick={handleLinkClick}
-            >
-              Join Waitlist
             </a>
             <a 
               href="#contact" 
@@ -107,18 +108,6 @@ const Navbar = () => {
               Contact
             </a>
           </nav>
-          
-          <div className="p-4 mt-auto">
-            <Button 
-              className="w-full bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal hover:opacity-90 text-white py-3"
-              onClick={() => {
-                window.location.href = "#waitlist";
-                handleLinkClick();
-              }}
-            >
-              Join Waitlist
-            </Button>
-          </div>
         </div>
       )}
     </header>

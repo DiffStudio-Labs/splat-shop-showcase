@@ -10,21 +10,35 @@ import FAQSection from "@/components/FAQSection";
 import WaitlistSection from "@/components/WaitlistSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PersistentWaitlist from "@/components/PersistentWaitlist";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <HeroSection />
-      <HowItWorksSection />
-      <DemoSection />
-      <FeaturesSection />
+      <div id="how-it-works">
+        <HowItWorksSection />
+      </div>
+      <div id="showcase">
+        <DemoSection />
+      </div>
+      <div id="features">
+        <FeaturesSection />
+      </div>
       <PreLaunchSection />
-      <IntegrationsSection />
-      <FAQSection />
+      <div id="integrations">
+        <IntegrationsSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
       <WaitlistSection />
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
       <Footer />
+      <PersistentWaitlist />
     </div>
   );
 };
