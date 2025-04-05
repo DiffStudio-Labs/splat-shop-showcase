@@ -7,6 +7,7 @@ This project is configured to automatically deploy to GitHub Pages when changes 
 
 1. The GitHub Actions workflow (`.github/workflows/deploy.yml`) is triggered whenever code is pushed to the `prod` branch.
 2. It builds the project and deploys it to GitHub Pages.
+3. The application is configured to work with the repository name as the base path.
 
 ## Development workflow
 
@@ -35,21 +36,24 @@ Before the automatic deployment works, you need to:
 
 The site will be available at: `https://[your-username].github.io/[repository-name]/`
 
-## First-time setup
-
-If this is a new repository, make sure to:
-
-1. Create a `prod` branch: 
-   ```
-   git checkout -b prod
-   git push -u origin prod
-   ```
-2. Enable GitHub Pages in your repository settings
-3. Make your first push to the `prod` branch to trigger the initial deployment
-
 ## Troubleshooting
 
-If deployment fails:
-- Check the GitHub Actions tab in your repository to see the error logs
-- Ensure you've enabled GitHub Pages in your repository settings
-- Verify you have the correct permissions set for GitHub Pages deployment
+If deployment fails or the site shows a blank page:
+
+1. Make sure your GitHub Pages is configured to use GitHub Actions (not branch deployment)
+2. Check the GitHub Actions tab in your repository to see the error logs
+3. Ensure you've enabled GitHub Pages in your repository settings
+4. Verify you have the correct permissions set for GitHub Pages deployment
+5. Check the browser console for any JavaScript errors that might be preventing the site from loading
+6. Verify the application correctly uses the base path (import.meta.env.BASE_URL) for routing
+
+## Local Testing with Base Path
+
+To test how the site will work with the base path locally:
+
+```
+# Run with the base path that matches your repository name
+npm run dev -- --base=/your-repository-name/
+```
+
+This simulates how the application will behave when deployed to GitHub Pages.
