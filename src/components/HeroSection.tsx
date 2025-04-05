@@ -23,7 +23,7 @@ const HeroSection = () => {
               <Button size="lg" className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
                 <a href="#waitlist">Join the Waitlist</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+              <Button size="lg" variant="outline" className="border-white/30 bg-white/10 hover:bg-white/20 text-white">
                 <a href="#demo">See Demo</a>
               </Button>
             </div>
