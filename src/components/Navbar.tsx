@@ -58,7 +58,17 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white mobile-nav">
+        <div 
+          className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white"
+          style={{
+            backgroundColor: '#3f2e74', 
+            opacity: 1,
+            backdropFilter: 'none',
+            WebkitBackdropFilter: 'none',
+            border: 'none',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+          }}
+        >
           <nav className="flex flex-col p-4">
             <a 
               href="#features" 
