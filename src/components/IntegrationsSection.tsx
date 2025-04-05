@@ -12,19 +12,19 @@ const integrations = [
   },
   {
     name: "Adobe Commerce",
-    logo: "https://business.adobe.com/content/dam/dx/us/en/products/commerce/magento-commerce/magento-commerce-product-full-demo-video-posterframe.jpg.img.jpg",
+    logo: "https://img.logo.dev/adobe.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
     name: "Wix",
-    logo: "https://static.wixstatic.com/media/178327_eb89e759b4b84ce6adcf2ef69a509ff8~mv2.png/v1/fill/w_1864,h_1064,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Wix%20logo%20for%20social.png",
+    logo: "https://img.logo.dev/wix.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
     name: "Salesforce Commerce",
-    logo: "https://www.salesforce.com/content/dam/web/en_us/www/images/sales-cloud/lightning-for-outlook-sales-cloud-grow-business.png",
+    logo: "https://img.logo.dev/salesforce.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
     name: "BigCommerce",
-    logo: "https://www.bigcommerce.com/assets/logos/bc-logo-dark.svg",
+    logo: "https://img.logo.dev/bigcommerce.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   }
 ];
 
@@ -55,7 +55,7 @@ const IntegrationsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 text-sm">More integrations coming soon...</p>
+          <p className="text-gray-600 text-sm">These integrations are planned for future releases.</p>
         </div>
       </div>
     </section>
