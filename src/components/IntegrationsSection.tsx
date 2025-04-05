@@ -4,11 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 const integrations = [
   {
     name: "Shopify",
-    logo: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify_logo_whitebg.png",
+    logo: "https://img.logo.dev/shopify.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
     name: "WooCommerce",
-    logo: "https://woocommerce.com/wp-content/uploads/2023/02/woo-logo-portrait.svg",
+    logo: "https://img.logo.dev/woocommerce.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
     name: "Adobe Commerce",
