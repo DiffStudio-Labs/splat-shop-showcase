@@ -11,7 +11,7 @@ const ContactSection = () => {
     name: "",
     email: "",
     company: "",
-    subject: "",
+    subject: "pre-launch", // Set default subject to pre-launch
     message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +49,7 @@ const ContactSection = () => {
         name: "",
         email: "",
         company: "",
-        subject: "",
+        subject: "pre-launch",
         message: ""
       });
     }, 1000);
@@ -65,7 +65,7 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Contact Us</h2>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-            Have questions about our platform or interested in pre-launch services? Get in touch with our team.
+            Have questions about our platform, interested in our hands-on <strong>Pre-Launch 3D Modeling Services</strong>, or need to get in touch with our team? Fill out the form below.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ const ContactSection = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm text-gray-200">Subject</label>
-                <Select value={formState.subject} onValueChange={handleSelectChange}>
+                <Select defaultValue="pre-launch" value={formState.subject} onValueChange={handleSelectChange}>
                   <SelectTrigger className="bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select a topic" />
                   </SelectTrigger>
