@@ -69,17 +69,30 @@
 }
 
 /* Mobile navigation styles */
-.mobile-nav {
-  background-color: #3f2e74 !important;
-  opacity: 1 !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-  /* Ensure no transparency by disabling all potential transparency properties */
-  -moz-opacity: 1 !important;
-  -khtml-opacity: 1 !important;
-  filter: alpha(opacity=100) !important;
-  isolation: isolate !important;
-  mix-blend-mode: normal !important;
+.mobile-nav-container {
+  background-color: #3f2e74;
+  position: fixed;
+  top: 56px; /* Match the header height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Ensure the mobile nav is completely opaque and has no backdrop filters */
+.mobile-nav-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3f2e74;
+  opacity: 1;
+  z-index: -1;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }

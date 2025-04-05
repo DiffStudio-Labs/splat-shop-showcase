@@ -61,10 +61,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - using separate React Portal for better isolation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white mobile-nav">
-          <nav className="flex flex-col p-4">
+        <div className="md:hidden fixed inset-0 top-14 z-50 flex flex-col text-white mobile-nav-container">
+          <div className="absolute inset-0 bg-diffstudio-purple" style={{opacity: 1}}></div>
+          <nav className="flex flex-col p-4 relative z-10">
             <a 
               href="#features" 
               className="py-3 px-4 text-lg text-white hover:bg-white/10"
@@ -109,7 +110,7 @@ const Navbar = () => {
             </a>
           </nav>
           
-          <div className="p-4 mt-auto">
+          <div className="p-4 mt-auto relative z-10">
             <Button 
               className="w-full bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal hover:opacity-90 text-white py-3"
               onClick={() => {
