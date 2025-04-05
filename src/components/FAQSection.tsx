@@ -8,6 +8,10 @@ import {
 
 const faqs = [
   {
+    question: "Do you offer services to create 3D models before the platform launch?",
+    answer: "Yes! We offer a Pre-Launch 3D Modeling Service. Our team can create models for you either remotely (you provide videos following our guides) or via in-person scanning if you're located in the NY, NJ, PA, or surrounding East Coast areas. Please see the dedicated section above for details or contact us and select 'Pre-launch Services' as the subject to discuss your project."
+  },
+  {
     question: "What is DiffStudio and how does it work?",
     answer: "DiffStudio is a platform that enables e-commerce sellers to create interactive 3D digital twins of their products. Our workflow is simple: upload your product images to our web app, use our editor to refine and enhance the 3D scan, and then publish directly to your e-commerce platform. We transform standard product images into photorealistic 3D models that customers can interact with, explore from any angle, and zoom in to see fine details."
   },

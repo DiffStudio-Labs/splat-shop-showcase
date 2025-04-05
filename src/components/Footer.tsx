@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/5e1d0c7d-49ba-4cbb-9b5a-3864ed85e994.png" 
+                src="/lovable-uploads/diffstudio-logo.svg" 
                 alt="DiffStudio Logo" 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
               <span className="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-diffstudio-red via-diffstudio-orange to-diffstudio-teal">
                 DiffStudio
