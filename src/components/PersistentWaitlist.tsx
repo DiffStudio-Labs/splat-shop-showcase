@@ -34,9 +34,12 @@ const PersistentWaitlist = () => {
       const result = await addToWaitlist(email, source);
       
       if (result.success) {
+        // Check if this is a duplicate email case
+        const message = result.message || "You've been added to our waitlist. We'll notify you when we launch!";
+        
         toast({
           title: "Success!",
-          description: "You've been added to our waitlist. We'll notify you when we launch!",
+          description: message,
           duration: 5000,
         });
         setEmail("");

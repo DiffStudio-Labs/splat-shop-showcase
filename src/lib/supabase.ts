@@ -22,7 +22,18 @@ export async function addToWaitlist(email: string, source: string = 'main') {
         { email, source, created_at: new Date().toISOString() }
       ]);
     
-    if (error) throw error;
+    if (error) {
+      // Check specifically for duplicate email error (unique constraint violation)
+      if (error.code === '23505') {
+        // This is a duplicate email - return success but with a different message
+        return { 
+          success: true, 
+          data: null, 
+          message: 'You\'re already on our waitlist! We\'ll notify you when we launch.' 
+        };
+      }
+      throw error;
+    }
     
     return { success: true, data };
   } catch (error) {
