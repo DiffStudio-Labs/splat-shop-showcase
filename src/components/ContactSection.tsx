@@ -1,42 +1,33 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 const ContactSection = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     company: "",
     subject: "",
-    message: "",
+    message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
-
   const handleSelectChange = (value: string) => {
     setFormState({
       ...formState,
-      subject: value,
+      subject: value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -47,20 +38,18 @@ const ContactSection = () => {
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
-        duration: 5000,
+        duration: 5000
       });
       setFormState({
         name: "",
         email: "",
         company: "",
         subject: "",
-        message: "",
+        message: ""
       });
     }, 1000);
   };
-
-  return (
-    <section id="contact" className="py-20 relative hero-gradient">
+  return <section id="contact" className="py-20 relative hero-gradient">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
         <div className="absolute top-[30%] right-[15%] w-80 h-80 rounded-full bg-diffstudio-red blur-[100px]"></div>
@@ -80,42 +69,18 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm text-gray-200">Full Name</label>
-                <Input
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-                />
+                <Input id="name" name="name" placeholder="Your name" value={formState.name} onChange={handleChange} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-300" />
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm text-gray-200">Email Address</label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={formState.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-                />
+                <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formState.email} onChange={handleChange} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-300" />
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="company" className="text-sm text-gray-200">Company Name</label>
-                <Input
-                  id="company"
-                  name="company"
-                  placeholder="Your company"
-                  value={formState.company}
-                  onChange={handleChange}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-                />
+                <Input id="company" name="company" placeholder="Your company" value={formState.company} onChange={handleChange} className="bg-white/10 border-white/20 text-white placeholder:text-gray-300" />
               </div>
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm text-gray-200">Subject</label>
@@ -136,25 +101,11 @@ const ContactSection = () => {
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm text-gray-200">Message</label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder="How can we help you?"
-                rows={6}
-                value={formState.message}
-                onChange={handleChange}
-                required
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-              />
+              <Textarea id="message" name="message" placeholder="How can we help you?" rows={6} value={formState.message} onChange={handleChange} required className="bg-white/10 border-white/20 text-white placeholder:text-gray-300" />
             </div>
 
             <div className="text-center">
-              <Button 
-                type="submit" 
-                disabled={isLoading}
-                className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white px-8 py-6"
-                size="lg"
-              >
+              <Button type="submit" disabled={isLoading} className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white px-8 py-6" size="lg">
                 {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </div>
@@ -162,15 +113,7 @@ const ContactSection = () => {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="p-6">
-            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
-            <p className="text-gray-300">+1 (123) 456-7890</p>
-          </div>
+          
           <div className="p-6">
             <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -222,8 +165,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
