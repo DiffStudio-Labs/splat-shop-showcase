@@ -6,11 +6,14 @@ const HeroSection = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   // Function to handle smooth scrolling to the demo section
-  const handleScrollToDemo = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const demoSection = document.getElementById('demo');
+  const handleScrollToDemo = () => {
+    // Looking for the demo section by id "showcase" instead of "demo"
+    const demoSection = document.getElementById('showcase');
     if (demoSection) {
       demoSection.scrollIntoView({ behavior: 'smooth' });
+      console.log("Scrolling to demo section:", demoSection);
+    } else {
+      console.error("Demo section not found");
     }
   };
 
@@ -36,8 +39,13 @@ const HeroSection = () => {
               <Button size="lg" className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
                 <a href="#waitlist">Join the Waitlist</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 bg-white/10 hover:bg-white/20 text-white">
-                <a href="#demo" onClick={handleScrollToDemo}>See Demo</a>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 bg-white/10 hover:bg-white/20 text-white"
+                onClick={handleScrollToDemo}
+              >
+                See Demo
               </Button>
             </div>
           </div>
