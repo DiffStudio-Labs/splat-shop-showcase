@@ -1,5 +1,19 @@
+
 import { Button } from "@/components/ui/button";
+import { useEffect, useRef } from "react";
+
 const HeroSection = () => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Function to handle smooth scrolling to the demo section
+  const handleScrollToDemo = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const demoSection = document.getElementById('demo');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
@@ -23,7 +37,7 @@ const HeroSection = () => {
                 <a href="#waitlist">Join the Waitlist</a>
               </Button>
               <Button size="lg" variant="outline" className="border-white/30 bg-white/10 hover:bg-white/20 text-white">
-                <a href="#demo">See Demo</a>
+                <a href="#demo" onClick={handleScrollToDemo}>See Demo</a>
               </Button>
             </div>
           </div>
@@ -32,6 +46,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden z-20">
                 <div style={{ width: '100%', height: '100%', position: 'relative' }}>
                   <iframe 
+                    ref={iframeRef}
                     id="viewer" 
                     allow="fullscreen; xr-spatial-tracking"
                     allowFullScreen={true}
@@ -40,6 +55,7 @@ const HeroSection = () => {
                       height: '100%',
                       position: 'relative',
                     }}
+                    loading="eager"
                     src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
                   />
                 </div>
