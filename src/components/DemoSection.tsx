@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -25,6 +26,36 @@ const demoProducts = [
 
 const DemoSection = () => {
   const [activeTab, setActiveTab] = useState("product1");
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  
+  useEffect(() => {
+    // Handle fullscreen messages from iframe if needed
+    const handleMessage = (event: MessageEvent) => {
+      const iframe = iframeRef.current;
+      if (!iframe) return;
+
+      if (event.data === "requestFullscreen") {
+        iframe.style.position = "fixed";
+        iframe.style.top = "0";
+        iframe.style.left = "0";
+        iframe.style.width = "100vw";
+        iframe.style.height = "100vh";
+        iframe.style.zIndex = "9999";
+        iframe.style.border = "none";
+      } else if (event.data === "exitFullscreen") {
+        iframe.style.position = "relative";
+        iframe.style.top = "auto";
+        iframe.style.left = "auto";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.zIndex = "auto";
+        iframe.style.border = "none";
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
   
   return <section id="demo" className="py-20 relative hero-gradient">
       {/* Background gradient elements */}
@@ -61,13 +92,17 @@ const DemoSection = () => {
                     <div className="aspect-square rounded-xl overflow-hidden glass-card">
                       <div className="w-full h-full relative">
                         <iframe 
+                          ref={iframeRef}
                           id="viewer" 
                           allow="fullscreen; xr-spatial-tracking"
                           allowFullScreen={true}
+                          webkitAllowFullScreen={true}
+                          mozallowfullscreen={true}
                           style={{ 
                             width: '100%', 
                             height: '100%',
                             position: 'relative',
+                            border: 'none',
                           }}
                           src={product.viewerUrl}
                         />
