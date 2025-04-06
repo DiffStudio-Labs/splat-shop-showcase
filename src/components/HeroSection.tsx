@@ -1,9 +1,10 @@
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   // Function to handle smooth scrolling to the demo section
   const handleScrollToDemo = () => {
@@ -16,6 +17,20 @@ const HeroSection = () => {
       console.error("Demo section not found");
     }
   };
+
+  // Track when the iframe has loaded
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const handleIframeLoad = () => {
+      console.log("Hero iframe loaded");
+      setIframeLoaded(true);
+    };
+
+    iframe.addEventListener('load', handleIframeLoad);
+    return () => iframe.removeEventListener('load', handleIframeLoad);
+  }, []);
 
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
       {/* Background gradient elements */}
@@ -44,8 +59,9 @@ const HeroSection = () => {
                 variant="outline" 
                 className="border-white/30 bg-white/10 hover:bg-white/20 text-white"
                 onClick={handleScrollToDemo}
+                disabled={!iframeLoaded}
               >
-                See Demo
+                {iframeLoaded ? "See Demo" : "Loading Demo..."}
               </Button>
             </div>
           </div>
@@ -58,10 +74,13 @@ const HeroSection = () => {
                     id="viewer" 
                     allow="fullscreen; xr-spatial-tracking"
                     allowFullScreen={true}
+                    webkitAllowFullScreen={true}
+                    mozallowfullscreen={true}
                     style={{ 
                       width: '100%', 
                       height: '100%',
                       position: 'relative',
+                      border: 'none'
                     }}
                     loading="eager"
                     src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
