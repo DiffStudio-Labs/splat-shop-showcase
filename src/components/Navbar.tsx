@@ -34,14 +34,21 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="#how-it-works" className="text-sm text-white hover:text-diffstudio-orange transition-colors">How it Works</a>
-            <a href="#showcase" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Showcase</a>
-            <a href="#features" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Features</a>
-            <a href="#integrations" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Integrations</a>
-            <a href="#faq" className="text-sm text-white hover:text-diffstudio-orange transition-colors">FAQ</a>
-            <a href="#contact" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Contact</a>
-          </nav>
+          <div className="hidden md:flex items-center">
+            <nav className="flex items-center space-x-6 mr-6">
+              <a href="#how-it-works" className="text-sm text-white hover:text-diffstudio-orange transition-colors">How it Works</a>
+              <a href="#showcase" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Showcase</a>
+              <a href="#features" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Features</a>
+              <a href="#integrations" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Integrations</a>
+              <a href="#faq" className="text-sm text-white hover:text-diffstudio-orange transition-colors">FAQ</a>
+              <a href="#contact" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Contact</a>
+            </nav>
+            <a href="#waitlist">
+              <Button className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
+                Join Waitlist
+              </Button>
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button 
@@ -107,6 +114,13 @@ const Navbar = () => {
               onClick={handleLinkClick}
             >
               Contact
+            </a>
+            <a 
+              href="#waitlist" 
+              className="py-3 px-4 my-2 text-lg text-white bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 rounded-md"
+              onClick={handleLinkClick}
+            >
+              Join Waitlist
             </a>
           </nav>
         </div>

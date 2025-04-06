@@ -10,7 +10,6 @@ import FAQSection from "@/components/FAQSection";
 import WaitlistSection from "@/components/WaitlistSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import PersistentWaitlist from "@/components/PersistentWaitlist";
 import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
@@ -39,7 +38,6 @@ const Index = () => {
         <ContactSection />
       </div>
       <Footer />
-      <PersistentWaitlist />
       <Toaster />
     </div>
   );
