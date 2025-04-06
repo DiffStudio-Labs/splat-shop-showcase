@@ -33,7 +33,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden">
                 {/* Live 3D product viewer iframe */}
                 <iframe 
-                  src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
+                  src="https://superspl.at/s?id=371ecb59"
                   className="w-full h-full border-0"
                   title="3D Product Viewer"
                   allowFullScreen
