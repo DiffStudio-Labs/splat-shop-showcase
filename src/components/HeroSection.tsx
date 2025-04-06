@@ -39,7 +39,7 @@ const HeroSection = () => {
                   allowFullScreen
                   loading="lazy"
                 ></iframe> */}
-                <iframe id="viewer" width="800" height="500" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=371ecb59"></iframe>
+                <iframe id="viewer" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=371ecb59"></iframe>
               </div>
               <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-diffstudio-teal/30 blur-2xl"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-diffstudio-orange/30 blur-xl"></div>
