@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
@@ -30,23 +31,14 @@ const HeroSection = () => {
           <div className="flex-1 relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden">
-                {/* This would be your 3D product viewer/demo in production */}
-                <div className="bg-gradient-to-br from-diffstudio-purple to-diffstudio-blue w-full h-full flex items-center justify-center">
-                  <div className="text-white text-center p-6">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Interactive 3D View</h3>
-                    <p className="text-white/80">Our 3D product visualizations let customers explore every angle and detail.</p>
-                  </div>
-                </div>
+                {/* Live 3D product viewer iframe */}
+                <iframe 
+                  src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
+                  className="w-full h-full border-0"
+                  title="3D Product Viewer"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
               </div>
               <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-diffstudio-teal/30 blur-2xl"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-diffstudio-orange/30 blur-xl"></div>
