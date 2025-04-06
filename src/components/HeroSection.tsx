@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 flex items-center hero-gradient">
@@ -30,16 +29,20 @@ const HeroSection = () => {
           </div>
           <div className="flex-1 relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden">
-                {/* Live 3D product viewer iframe */}
-                {/* <iframe 
-                  src="https://superspl.at/s?id=371ecb59"
-                  className="w-full h-full border-0"
-                  title="3D Product Viewer"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe> */}
-                <iframe id="viewer" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=371ecb59"></iframe>
+              <div className="absolute inset-0 glass-card rounded-2xl overflow-hidden z-20">
+                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                  <iframe 
+                    id="viewer" 
+                    allow="fullscreen; xr-spatial-tracking"
+                    allowFullScreen={true}
+                    style={{ 
+                      width: '100%', 
+                      height: '100%',
+                      position: 'relative',
+                    }}
+                    src="https://superspl.at/s?id=371ecb59"
+                  />
+                </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-diffstudio-teal/30 blur-2xl"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-diffstudio-orange/30 blur-xl"></div>
