@@ -40,7 +40,7 @@ const HeroSection = () => {
                       height: '100%',
                       position: 'relative',
                     }}
-                    src="https://superspl.at/s?id=371ecb59"
+                    src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
                   />
                 </div>
               </div>

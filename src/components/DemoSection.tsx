@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,17 +6,20 @@ const demoProducts = [
   {
     id: "product1",
     name: "Designer Chair",
-    description: "Explore our ergonomic designer chair from every angle with our interactive 3D model."
+    description: "Explore our ergonomic designer chair from every angle with our interactive 3D model.",
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/sofa-chair/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/sofa-chair/scene.compressed.ply"
   }, 
   {
     id: "product2",
-    name: "Smart Watch",
-    description: "Examine the details of our latest smartwatch with interactive controls and animations."
+    name: "Levi's Jacket",
+    description: "Experience our premium denim jacket in stunning detail with our interactive 3D mannequin display.",
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/levis_jacket_macy_newport/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/levis_jacket_macy_newport/scene.compressed.ply"
   }, 
   {
     id: "product3",
-    name: "Running Shoes",
-    description: "See these performance running shoes from all angles and explore their features."
+    name: "Wedding Dress",
+    description: "View every detail of this elegant wedding dress with our immersive 3D visualization technology.",
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/scene.compressed.ply"
   }
 ];
 
@@ -57,20 +59,18 @@ const DemoSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                   <div className="lg:col-span-3">
                     <div className="aspect-square rounded-xl overflow-hidden glass-card">
-                      {/* This would be your 3D product viewer in production */}
-                      <div className="w-full h-full bg-gradient-to-br from-diffstudio-purple/70 to-diffstudio-blue/70 flex items-center justify-center p-6">
-                        <div className="text-center">
-                          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="animate-spin-slow">
-                              <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c-4.97 0-9-4.03-9-9m9 9a9 9 0 0 0 0-18"></path>
-                            </svg>
-                          </div>
-                          <h3 className="text-xl font-bold mb-2 text-white">{product.name}</h3>
-                          <p className="text-gray-200 mb-4">Interactive 3D Model</p>
-                          <p className="text-sm text-white/60">
-                            (Demo visualization - in the live product your 3D model would appear here)
-                          </p>
-                        </div>
+                      <div className="w-full h-full relative">
+                        <iframe 
+                          id="viewer" 
+                          allow="fullscreen; xr-spatial-tracking"
+                          allowFullScreen={true}
+                          style={{ 
+                            width: '100%', 
+                            height: '100%',
+                            position: 'relative',
+                          }}
+                          src={product.viewerUrl}
+                        />
                       </div>
                     </div>
                   </div>
