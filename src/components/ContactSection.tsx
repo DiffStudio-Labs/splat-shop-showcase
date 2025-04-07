@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import emailjs from "emailjs-com";
-import { Facebook } from "lucide-react";
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -188,9 +188,6 @@ const ContactSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
             <p className="text-gray-300">contact@diffstudio.co</p>
-            <p className="text-sm text-gray-400 mt-4">
-              By contacting us, you agree to our <a href="#" onClick={(e) => handleUnavailableLink(e, "Privacy Policy")} className="underline hover:text-white">Privacy Policy</a>
-            </p>
           </div>
         </div>
       </div>
