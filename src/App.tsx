@@ -8,8 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
-// Get the base path from Vite's environment
-const basePath = import.meta.env.BASE_URL;
+// Use '/' as base path since we're using a custom domain
+const basePath = '/';
 
 const queryClient = new QueryClient();
 
