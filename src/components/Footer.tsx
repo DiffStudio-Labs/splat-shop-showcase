@@ -1,8 +1,20 @@
 
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Footer = () => {
   const basePath = import.meta.env.BASE_URL;
+  const { toast } = useToast();
+  
+  const handleUnavailableLink = (e: React.MouseEvent, linkName: string) => {
+    e.preventDefault();
+    toast({
+      title: "Coming Soon",
+      description: `Our ${linkName} page is coming soon! We're just getting started.`,
+      duration: 3000,
+    });
+  };
   
   return (
     <footer className="bg-gray-900 text-white">
@@ -23,19 +35,19 @@ const Footer = () => {
               Transforming e-commerce with interactive 3D product experiences.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" onClick={(e) => handleUnavailableLink(e, "LinkedIn")} className="text-gray-400 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect width="4" height="12" x="2" y="9"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" onClick={(e) => handleUnavailableLink(e, "Twitter")} className="text-gray-400 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" onClick={(e) => handleUnavailableLink(e, "Instagram")} className="text-gray-400 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -51,7 +63,7 @@ const Footer = () => {
               <li><a href="#features" className="text-gray-400 hover:text-white">Features</a></li>
               <li><a href="#integrations" className="text-gray-400 hover:text-white">Integrations</a></li>
               <li><a href="#demo" className="text-gray-400 hover:text-white">Demo</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Pricing</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Pricing")} className="text-gray-400 hover:text-white">Pricing</a></li>
             </ul>
           </div>
           
@@ -59,19 +71,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><a href="#faq" className="text-gray-400 hover:text-white">FAQ</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Tutorials</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Documentation")} className="text-gray-400 hover:text-white">Documentation</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Blog")} className="text-gray-400 hover:text-white">Blog</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Tutorials")} className="text-gray-400 hover:text-white">Tutorials</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "About Us")} className="text-gray-400 hover:text-white">About Us</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white">Contact</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Terms of Service</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Privacy Policy")} className="text-gray-400 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Terms of Service")} className="text-gray-400 hover:text-white">Terms of Service</a></li>
             </ul>
           </div>
         </div>
