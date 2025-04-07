@@ -56,7 +56,7 @@ const HeroSection = () => {
                   <iframe 
                     ref={iframeRef}
                     id="viewer" 
-                    allow="fullscreen; xr-spatial-tracking"
+                    allow="fullscreen"
                     allowFullScreen={true}
                     style={{ 
                       width: '100%', 
