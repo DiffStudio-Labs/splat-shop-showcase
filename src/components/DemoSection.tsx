@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -26,6 +26,19 @@ const demoProducts = [
 const DemoSection = () => {
   const [activeTab, setActiveTab] = useState("product1");
   
+  useEffect(() => {
+    const handleFullscreen = (event: MessageEvent) => {
+      if (event.data === 'requestFullscreen') {
+        document.documentElement.classList.add('fullscreen');
+      } else if (event.data === 'exitFullscreen') {
+        document.documentElement.classList.remove('fullscreen');
+      }
+    };
+
+    window.addEventListener('message', handleFullscreen);
+    return () => window.removeEventListener('message', handleFullscreen);
+  }, []);
+
   return <section id="demo" className="py-20 relative hero-gradient">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30 z-0">
@@ -58,8 +71,8 @@ const DemoSection = () => {
             {demoProducts.map(product => <TabsContent key={product.id} value={product.id}>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                   <div className="lg:col-span-3">
-                    <div className="aspect-square rounded-xl overflow-hidden glass-card">
-                      <div className="w-full h-full relative">
+                    <div id="view-experience" className="aspect-square rounded-xl overflow-hidden">
+                      <div className="viewer-container w-full h-full relative">
                         <iframe 
                           id="viewer" 
                           allow="fullscreen; xr-spatial-tracking"
@@ -67,7 +80,7 @@ const DemoSection = () => {
                           style={{ 
                             width: '100%', 
                             height: '100%',
-                            position: 'relative',
+                            border: 'none'
                           }}
                           src={product.viewerUrl}
                         />
