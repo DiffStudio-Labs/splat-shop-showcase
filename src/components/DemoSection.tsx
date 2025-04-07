@@ -17,8 +17,8 @@ const demoProducts = [
   }, 
   {
     id: "product3",
-    name: "Wedding Dress",
-    description: "View every detail of this elegant wedding dress with our immersive 3D visualization technology.",
+    name: "Elegant Dress",
+    description: "View every detail of this elegant dress with our immersive 3D visualization technology.",
     viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/scene.compressed.ply"
   }
 ];
