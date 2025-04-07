@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -97,7 +98,7 @@ const DemoSection = () => {
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-diffstudio-teal">
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
-                          360° view of the product
+                          Multi-angle view within captured perspectives
                         </li>
                         <li className="flex items-center">
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-diffstudio-teal">
@@ -109,7 +110,7 @@ const DemoSection = () => {
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-diffstudio-teal">
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
-                          Interactive features
+                          Interactive viewing experience
                         </li>
                       </ul>
                     </div>
