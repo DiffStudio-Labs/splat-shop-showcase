@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import emailjs from "emailjs-com";
+import { Facebook } from "lucide-react";
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -190,14 +192,16 @@ const ContactSection = () => {
           </div>
           <div className="p-6 text-center">
             <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                <path d="m2 12 3.5 3.5L12 9"></path>
-                <path d="M19 12h-7"></path>
-              </svg>
+              <Facebook size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-white">Connect With Us</h3>
-            <p className="text-gray-300">Find our social links in the footer below</p>
+            <h3 className="text-xl font-semibold mb-2 text-white">Facebook</h3>
+            <a 
+              href="#" 
+              onClick={(e) => handleUnavailableLink(e, "Facebook")} 
+              className="text-gray-300 hover:text-white inline-block"
+            >
+              @diffstudio
+            </a>
           </div>
         </div>
       </div>
