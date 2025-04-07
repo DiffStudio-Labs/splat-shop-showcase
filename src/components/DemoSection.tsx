@@ -76,7 +76,7 @@ const DemoSection = () => {
                       <div className="viewer-container w-full h-full">
                         <iframe 
                           id="viewer" 
-                          allow="fullscreen; xr-spatial-tracking"
+                          allow="fullscreen"
                           allowFullScreen={true}
                           style={{ 
                             width: '100%', 
