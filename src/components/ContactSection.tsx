@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -176,19 +175,6 @@ const ContactSection = () => {
               </Button>
             </div>
           </form>
-        </div>
-
-        <div className="mt-16 text-center mx-auto max-w-md">
-          <div className="p-6">
-            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
-            <p className="text-gray-300">contact@diffstudio.co</p>
-          </div>
         </div>
       </div>
     </section>;
