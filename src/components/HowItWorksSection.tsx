@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-white relative">
+    <section id="how-it-works" className="py-20 bg-white relative overflow-hidden">
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-10 z-0">
         <div className="absolute top-[20%] right-[10%] w-72 h-72 rounded-full bg-diffstudio-blue blur-[80px]"></div>

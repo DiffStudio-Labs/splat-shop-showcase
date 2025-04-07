@@ -14,7 +14,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
       <Navbar />
       <HeroSection />
       <div id="how-it-works">
