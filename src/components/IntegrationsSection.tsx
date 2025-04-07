@@ -20,7 +20,7 @@ const integrations = [
     logo: "https://img.logo.dev/wix.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
-    name: "Salesforce Commerce",
+    name: "Salesforce",
     logo: "https://img.logo.dev/salesforce.com?token=pk_IR12mFdQQs66gkIq4rYHqQ&retina=true",
   },
   {
