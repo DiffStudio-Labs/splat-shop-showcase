@@ -39,7 +39,7 @@ const PreLaunchSection = () => {
             Ready to bring your products to life before the official launch?
           </p>
           <a href="#contact">
-            <Button size="lg" className="bg-gradient-to-r from-diffstudio-blue to-diffstudio-purple hover:opacity-90 text-white">
+            <Button size="lg" className="bg-gradient-to-r from-diffstudio-blue to-diffstudio-purple hover:opacity-90 text-white px-4 py-2 max-w-full whitespace-normal h-auto">
               Contact Us About Pre-Launch Services
             </Button>
           </a>
