@@ -1,18 +1,29 @@
 
 # Deployment to GitHub Pages
 
-This project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch.
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the `prod` branch.
 
 ## How it works
 
-1. The GitHub Actions workflow (`.github/workflows/deploy.yml`) is triggered whenever code is pushed to the `main` branch.
+1. The GitHub Actions workflow (`.github/workflows/deploy.yml`) is triggered whenever code is pushed to the `prod` branch.
 2. It builds the project and deploys it to GitHub Pages.
 3. The application is configured to work with the repository name as the base path.
 
 ## Development workflow
 
-1. Make changes to the `main` branch for development and testing.
-2. The GitHub Actions workflow will automatically deploy your changes to GitHub Pages when you push to the `main` branch.
+1. Make changes to the `main` branch for development.
+2. Test your changes locally with `npm run dev`.
+3. When ready to deploy:
+   ```
+   # Switch to prod branch
+   git checkout prod
+   
+   # Merge changes from main
+   git merge main
+   
+   # Push to trigger deployment
+   git push origin prod
+   ```
 
 ## GitHub Pages Setup Required
 
