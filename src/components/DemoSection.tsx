@@ -72,7 +72,7 @@ const DemoSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                   <div className="lg:col-span-3">
                     <div id="view-experience" className="aspect-square rounded-xl overflow-hidden">
-                      <div className="viewer-container w-full h-full relative">
+                      <div className="viewer-container w-full h-full">
                         <iframe 
                           id="viewer" 
                           allow="fullscreen; xr-spatial-tracking"
