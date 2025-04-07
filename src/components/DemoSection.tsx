@@ -8,19 +8,19 @@ const demoProducts = [
     id: "product1",
     name: "Designer Chair",
     description: "Explore our ergonomic designer chair from every angle with our interactive 3D model.",
-    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/sofa-chair/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/sofa-chair/scene.compressed.ply"
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/landing-page/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/sofa-chair/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/sofa-chair/scene.compressed.ply"
   }, 
   {
     id: "product2",
     name: "Levi's Jacket",
     description: "Experience our premium denim jacket in stunning detail with our interactive 3D mannequin display.",
-    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/levis_jacket_macy_newport/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/levis_jacket_macy_newport/scene.compressed.ply"
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/landing-page/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/levis_jacket_macy_newport/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/levis_jacket_macy_newport/scene.compressed.ply"
   }, 
   {
     id: "product3",
     name: "Elegant Dress",
     description: "View every detail of this elegant dress with our immersive 3D visualization technology.",
-    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/mfit4-viewer/scene.compressed.ply"
+    viewerUrl: "https://d2g4atlfg3j0t6.cloudfront.net/landing-page/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/mfit4-viewer/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/mfit4-viewer/scene.compressed.ply"
   }
 ];
 

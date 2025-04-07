@@ -64,7 +64,7 @@ const HeroSection = () => {
                       position: 'relative',
                     }}
                     loading="eager"
-                    src="https://d2g4atlfg3j0t6.cloudfront.net/dev/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/dev/assets/calvin-klien-mannequin/scene.compressed.ply"
+                    src="https://d2g4atlfg3j0t6.cloudfront.net/landing-page/dist/index.html?settings=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/calvin-klien-mannequin/settings.json&content=https://d2g4atlfg3j0t6.cloudfront.net/landing-page/assets/calvin-klien-mannequin/scene.compressed.ply"
                   />
                 </div>
               </div>
