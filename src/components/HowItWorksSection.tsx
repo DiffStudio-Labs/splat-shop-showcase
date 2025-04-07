@@ -90,7 +90,7 @@ const HowItWorksSection = () => {
           </div>
           <div className="mt-8 text-center">
             <a href="#waitlist">
-              <Button size="lg" className="bg-gradient-to-r from-diffstudio-blue to-diffstudio-purple hover:opacity-90 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-diffstudio-blue to-diffstudio-purple hover:opacity-90 text-white px-4 py-2 max-w-full whitespace-normal h-auto">
                 Join the Waitlist & Transform Your Catalog
               </Button>
             </a>
