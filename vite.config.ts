@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// Get the repository name for GitHub Pages - defaults to '/' for local development
+// Get the base for GitHub Pages - defaults to '/' for local development
 const getBase = () => {
   // When GitHub Pages builds your site, it sets this environment variable
   // to the repository name that's being deployed
