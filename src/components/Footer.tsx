@@ -81,6 +81,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" onClick={(e) => handleUnavailableLink(e, "About Us")} className="text-gray-400 hover:text-white">About Us</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white">Contact</a></li>
+              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
               <li><a href="#" onClick={(e) => handleUnavailableLink(e, "Terms of Service")} className="text-gray-400 hover:text-white">Terms of Service</a></li>
             </ul>
           </div>
