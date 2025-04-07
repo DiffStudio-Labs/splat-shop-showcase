@@ -1,7 +1,6 @@
-
 import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
   const basePath = import.meta.env.BASE_URL;
@@ -41,17 +40,36 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex space-x-4">
-              <a href="#" onClick={(e) => handleUnavailableLink(e, "Facebook")} className="text-gray-400 hover:text-white">
-                <Facebook className="h-5 w-5" />
+              <a 
+                href="https://www.linkedin.com/company/diffstudio" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-white"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" onClick={(e) => handleUnavailableLink(e, "Twitter")} className="text-gray-400 hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" onClick={(e) => handleUnavailableLink(e, "Instagram")} className="text-gray-400 hover:text-white">
+              <a 
+                href="https://www.instagram.com/diffstudio.co/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-white"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" onClick={(e) => handleUnavailableLink(e, "LinkedIn")} className="text-gray-400 hover:text-white">
-                <Linkedin className="h-5 w-5" />
+              <a 
+                href="https://x.com/diffstudioco" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-white"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                onClick={(e) => handleUnavailableLink(e, "Facebook")} 
+                className="text-gray-400 hover:text-white"
+              >
+                <Facebook className="h-5 w-5" />
               </a>
             </div>
           </div>
