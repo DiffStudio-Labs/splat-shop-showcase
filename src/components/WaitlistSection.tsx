@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { addToWaitlist } from "@/lib/supabase";
+import { trackEvent } from "@/lib/analytics";
 
 const WaitlistSection = () => {
   const [email, setEmail] = useState("");
@@ -32,6 +33,9 @@ const WaitlistSection = () => {
       const result = await addToWaitlist(email, 'main_section');
       
       if (result.success) {
+        // Track successful waitlist signup
+        trackEvent('signup', 'waitlist', email);
+        
         // Check if this is a duplicate email case
         const message = result.message || "You've been added to our waitlist. We'll notify you when we launch!";
         
@@ -46,6 +50,10 @@ const WaitlistSection = () => {
       }
     } catch (error) {
       console.error('Waitlist submission error:', error);
+      
+      // Track failed waitlist attempt
+      trackEvent('signup_error', 'waitlist', 'submission_error');
+      
       toast({
         title: "Something went wrong",
         description: "Unable to add you to the waitlist. Please try again later.",
