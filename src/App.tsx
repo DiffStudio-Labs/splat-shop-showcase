@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from "re
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookieBanner from "./components/CookieBanner";
 import React, { useEffect } from "react";
 import { trackPageView } from "./lib/analytics";
 
@@ -50,6 +51,7 @@ const App = () => (
       <BrowserRouter basename={basePath}>
         <AppRoutes />
       </BrowserRouter>
+      <CookieBanner />
     </TooltipProvider>
   </QueryClientProvider>
 );
