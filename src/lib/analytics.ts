@@ -9,7 +9,7 @@
 export const trackPageView = (path: string, title?: string) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     try {
-      (window as any).gtag('config', 'G-MEASUREMENT_ID', {
+      (window as any).gtag('config', 'G-1VKQN2FKGX', {
         page_path: path,
         page_title: title
       });
