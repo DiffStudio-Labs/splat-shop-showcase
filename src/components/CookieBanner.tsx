@@ -20,9 +20,11 @@ const CookieBanner = () => {
     localStorage.setItem("cookie-consent", "accepted");
     setShowBanner(false);
     // Allow analytics to run
-    window.gtag?.("consent", "update", {
-      analytics_storage: "granted",
-    });
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+      });
+    }
     trackEvent("cookie_consent", "accept");
   };
 
@@ -30,9 +32,11 @@ const CookieBanner = () => {
     localStorage.setItem("cookie-consent", "declined");
     setShowBanner(false);
     // Disable analytics
-    window.gtag?.("consent", "update", {
-      analytics_storage: "denied",
-    });
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+      });
+    }
     // We still track this specific event
     trackEvent("cookie_consent", "decline");
   };
