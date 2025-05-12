@@ -70,6 +70,7 @@ const WaitlistSection = () => {
         
         form.reset();
       } else {
+        console.error('Waitlist error:', result.error);
         throw new Error('Failed to add to waitlist');
       }
     } catch (error) {
