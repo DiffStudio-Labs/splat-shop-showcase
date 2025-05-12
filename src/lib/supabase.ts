@@ -22,21 +22,15 @@ export async function addToWaitlist(
       return { success: false, error: 'Invalid email format' };
     }
     
-    // Store the additional information in a metadata field since the company column doesn't exist
-    const metadata = JSON.stringify({
-      name,
-      company,
-      message
-    });
-    
     const { data, error } = await supabase
       .from('waitlist')
       .insert([
         { 
           email, 
-          source,
-          // Always include metadata - the database schema will ignore fields that don't exist
-          metadata
+          name,
+          company,
+          message,
+          source
         }
       ]);
     
