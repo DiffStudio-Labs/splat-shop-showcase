@@ -1,4 +1,3 @@
-
 // Analytics utility for tracking page views and events
 
 // Declare global gtag function
@@ -6,7 +5,7 @@ declare global {
   interface Window {
     gtag?: (
       command: string,
-      action: string | undefined,
+      action?: string,
       params?: Record<string, any>
     ) => void;
     dataLayer?: any[];
@@ -23,7 +22,7 @@ export const trackPageView = (path: string, title?: string) => {
     try {
       window.gtag('config', 'G-1VKQN2FKGX', {
         page_path: path,
-        page_title: title
+        page_title: title,
       });
       console.log(`📊 Page view tracked: ${path}`);
     } catch (error) {
@@ -50,7 +49,7 @@ export const trackEvent = (
       window.gtag('event', action, {
         event_category: category,
         event_label: label,
-        value: value
+        value: value,
       });
       console.log(`📊 Event tracked: ${action} (${category})`);
     } catch (error) {
