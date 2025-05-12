@@ -8,7 +8,13 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Function to add an email to the waitlist
-export async function addToWaitlist(email: string, source: string = 'main') {
+export async function addToWaitlist(
+  email: string, 
+  name: string, 
+  company: string,
+  message?: string,
+  source: string = 'main'
+) {
   try {
     // Basic email validation before sending to Supabase
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -19,7 +25,14 @@ export async function addToWaitlist(email: string, source: string = 'main') {
     const { data, error } = await supabase
       .from('waitlist')
       .insert([
-        { email, source, created_at: new Date().toISOString() }
+        { 
+          email, 
+          name,
+          company,
+          message,
+          source, 
+          created_at: new Date().toISOString() 
+        }
       ]);
     
     if (error) {

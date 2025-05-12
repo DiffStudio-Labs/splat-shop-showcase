@@ -2,39 +2,62 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { addToWaitlist } from "@/lib/supabase";
 import { trackEvent } from "@/lib/analytics";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+
+// Define form validation schema
+const waitlistSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Please enter a valid email"),
+  company: z.string().min(1, "Company is required"),
+  message: z.string().optional(),
+});
+
+type WaitlistFormValues = z.infer<typeof waitlistSchema>;
 
 const WaitlistSection = () => {
-  const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Email validation
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailRegex.test(email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-        duration: 3000
-      });
-      return;
-    }
-    
+  const form = useForm<WaitlistFormValues>({
+    resolver: zodResolver(waitlistSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (values: WaitlistFormValues) => {
     setIsLoading(true);
     
     try {
       // Call the Supabase function to add to waitlist
-      const result = await addToWaitlist(email, 'main_section');
+      const result = await addToWaitlist(
+        values.email, 
+        values.name,
+        values.company,
+        values.message || undefined,
+        'main_section'
+      );
       
       if (result.success) {
         // Track successful waitlist signup
-        trackEvent('signup', 'waitlist', email);
+        trackEvent('signup', 'waitlist', values.email);
         
         // Check if this is a duplicate email case
         const message = result.message || "You've been added to our waitlist. We'll notify you when we launch!";
@@ -44,7 +67,8 @@ const WaitlistSection = () => {
           description: message,
           duration: 5000,
         });
-        setEmail("");
+        
+        form.reset();
       } else {
         throw new Error('Failed to add to waitlist');
       }
@@ -76,25 +100,90 @@ const WaitlistSection = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-white/50 border-white/50 text-gray-800 placeholder:text-gray-600"
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-md mx-auto space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Name</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="Your full name" 
+                        {...field} 
+                        className="bg-white/50 border-white/50 text-gray-800 placeholder:text-gray-600"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
+              
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Email</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="email" 
+                        placeholder="Your work email" 
+                        {...field} 
+                        className="bg-white/50 border-white/50 text-gray-800 placeholder:text-gray-600"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="company"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Company</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="Your company name" 
+                        {...field} 
+                        className="bg-white/50 border-white/50 text-gray-800 placeholder:text-gray-600"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Message (Optional)</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Tell us how we can help your business" 
+                        {...field} 
+                        className="bg-white/50 border-white/50 text-gray-800 placeholder:text-gray-600"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <Button 
                 type="submit" 
                 disabled={isLoading}
-                className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white"
+                className="w-full bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white"
               >
                 {isLoading ? "Joining..." : "Join Waitlist"}
               </Button>
-            </div>
-          </form>
+            </form>
+          </Form>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="p-4">
