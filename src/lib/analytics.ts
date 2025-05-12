@@ -1,5 +1,16 @@
-
 // Analytics utility for tracking page views and events
+
+// Declare global gtag function
+declare global {
+  interface Window {
+    gtag?: (
+      command: string,
+      action?: string,
+      params?: Record<string, any>
+    ) => void;
+    dataLayer?: any[];
+  }
+}
 
 /**
  * Track a page view in Google Analytics
@@ -7,11 +18,11 @@
  * @param title The page title
  */
 export const trackPageView = (path: string, title?: string) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {
     try {
-      (window as any).gtag('config', 'G-1VKQN2FKGX', {
+      window.gtag('config', 'G-1VKQN2FKGX', {
         page_path: path,
-        page_title: title
+        page_title: title,
       });
       console.log(`📊 Page view tracked: ${path}`);
     } catch (error) {
@@ -33,12 +44,12 @@ export const trackEvent = (
   label?: string,
   value?: number
 ) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {
     try {
-      (window as any).gtag('event', action, {
+      window.gtag('event', action, {
         event_category: category,
         event_label: label,
-        value: value
+        value: value,
       });
       console.log(`📊 Event tracked: ${action} (${category})`);
     } catch (error) {
