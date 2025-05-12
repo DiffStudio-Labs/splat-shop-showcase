@@ -35,11 +35,8 @@ export async function addToWaitlist(
         { 
           email, 
           source,
-          // Since 'name', 'company', and 'message' columns don't exist in the database,
-          // we'll store this in metadata if that's available, otherwise ignore
-          ...(supabase.from('waitlist').columns?.includes('metadata') 
-            ? { metadata } 
-            : {})
+          // Always include metadata - the database schema will ignore fields that don't exist
+          metadata
         }
       ]);
     
