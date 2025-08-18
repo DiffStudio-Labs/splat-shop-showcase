@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 mb-4 md:mb-0">© 2025 DiffStudio Labs LLC. All rights reserved.</p>
+          <p className="text-gray-400 mb-4 md:mb-0">© 2025 DiffStudio, Inc. All rights reserved.</p>
           <div>
             <a href="#waitlist" className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
               Join Waitlist
