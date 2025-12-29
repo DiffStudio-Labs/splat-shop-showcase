@@ -57,11 +57,12 @@ const IntegrationsSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            These integrations will be released progressively during our beta phase. We're also working on additional analytics integrations (Klaviyo, Google Analytics) and marketing tools to enhance your 3D product experience. Join the waitlist for early access.
+            These integrations were planned for our platform. We also explored additional analytics integrations (Klaviyo, Google Analytics) and marketing tools to enhance the 3D product experience.
           </p>
-          <Button 
-            variant="outline" 
-            className="bg-white hover:bg-gray-100" 
+          {/* SHUTDOWN 2026: Waitlist button removed */}
+          {/* <Button
+            variant="outline"
+            className="bg-white hover:bg-gray-100"
             onClick={() => {
               const waitlistSection = document.getElementById('waitlist');
               if (waitlistSection) {
@@ -70,7 +71,7 @@ const IntegrationsSection = () => {
             }}
           >
             Join Waitlist
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

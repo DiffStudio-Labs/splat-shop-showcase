@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from "re
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Announcement from "./pages/Announcement";
 import CookieBanner from "./components/CookieBanner";
 
 import React, { useEffect } from "react";
@@ -37,6 +38,7 @@ const AppRoutes = () => (
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/announcement" element={<Announcement />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
