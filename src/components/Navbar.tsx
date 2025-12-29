@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
+    <header className="fixed w-full top-[52px] z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
@@ -43,11 +43,12 @@ const Navbar = () => {
               <a href="#faq" className="text-sm text-white hover:text-diffstudio-orange transition-colors">FAQ</a>
               <a href="#contact" className="text-sm text-white hover:text-diffstudio-orange transition-colors">Contact</a>
             </nav>
-            <a href="#waitlist">
+            {/* SHUTDOWN 2026: Waitlist button removed */}
+            {/* <a href="#waitlist">
               <Button className="bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 text-white">
                 Join Waitlist
               </Button>
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,13 +116,14 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <a 
-              href="#waitlist" 
+            {/* SHUTDOWN 2026: Waitlist button removed */}
+            {/* <a
+              href="#waitlist"
               className="py-3 px-4 my-2 text-lg text-white bg-gradient-to-r from-diffstudio-red to-diffstudio-orange hover:opacity-90 rounded-md"
               onClick={handleLinkClick}
             >
               Join Waitlist
-            </a>
+            </a> */}
           </nav>
         </div>
       )}

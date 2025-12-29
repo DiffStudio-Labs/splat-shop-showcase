@@ -114,11 +114,12 @@ const DemoSection = () => {
                         </li>
                       </ul>
                     </div>
-                    <a href="#waitlist">
+                    {/* SHUTDOWN 2026: Waitlist button removed */}
+                    {/* <a href="#waitlist">
                       <Button className="bg-white hover:bg-white/90 text-diffstudio-purple">
                         Join Waitlist
                       </Button>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </TabsContent>)}

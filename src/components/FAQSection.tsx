@@ -44,12 +44,12 @@ const faqs = [
     answer: "Absolutely. Our editor allows you to customize various aspects of how your 3D models appear, including background settings, lighting, initial viewing angle, and interactive controls for your customers."
   },
   {
-    question: "When is DiffStudio launching?",
-    answer: "We're currently in development and plan to launch in Q3/Q4 of 2025. However, we'll be rolling out beta access earlier for select partners. Join our waitlist to be considered for early beta access and receive exclusive founding member benefits when we launch."
+    question: "What happened to DiffStudio?",
+    answer: "After careful consideration, we made the difficult decision to close DiffStudio. While we will not be launching as a commercial product, this website remains as a showcase of the technology we developed. Visit our announcement page to learn more about our journey and decision."
   },
   {
-    question: "How much does DiffStudio cost?",
-    answer: "We'll offer several pricing tiers to accommodate businesses of different sizes. Pricing details will be announced closer to launch, but waitlist members will receive special founding member rates and benefits."
+    question: "Will DiffStudio be available for purchase?",
+    answer: "DiffStudio will not be launching as a commercial product. The company has closed, and this landing page serves as a portfolio of the technology and vision we developed."
   }
 ];
 
