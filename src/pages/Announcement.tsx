@@ -16,7 +16,7 @@ const Announcement = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
               An Important Update About <span className="gradient-text">DiffStudio</span>
             </h1>
-            <p className="text-gray-600">December 2024</p>
+            <p className="text-gray-600">December 2025</p>
           </div>
 
           <Separator className="my-6" />
