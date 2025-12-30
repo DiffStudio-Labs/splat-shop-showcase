@@ -88,13 +88,14 @@ const HowItWorksSection = () => {
               <span><strong>Cross-Platform Ready:</strong> Ensure seamless viewing on desktop, mobile, and tablets.</span>
             </div>
           </div>
-          <div className="mt-8 text-center">
+          {/* SHUTDOWN 2026: Waitlist button removed */}
+          {/* <div className="mt-8 text-center">
             <a href="#waitlist">
               <Button size="lg" className="bg-gradient-to-r from-diffstudio-blue to-diffstudio-purple hover:opacity-90 text-white px-4 py-2 max-w-full whitespace-normal h-auto">
                 Join the Waitlist & Transform Your Catalog
               </Button>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
